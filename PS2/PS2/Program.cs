@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace PS2
 {
@@ -7,16 +8,40 @@ namespace PS2
         static void Main(string[] args)
         {
             String line;
-            int n = -1;
-            int k = -1;
+            LinkedList<SimpleBinaryTree> uniqueTrees = new LinkedList<SimpleBinaryTree>();
+            LinkedList<SimpleBinaryTree> nonUniqueTrees = new LinkedList<SimpleBinaryTree>();
 
-            // Throw away the parsing of k and n.  They do not contribute to the algorithm at all
+
+            // Parse n and k
             line = Console.ReadLine();
             int whitespaceIndex = line.IndexOf(" ");
             string n_Unparsed = line.Substring(0, whitespaceIndex);
             string k_Unparsed = line.Substring(whitespaceIndex + 1, line.Length - whitespaceIndex - 1);
-            n = int.Parse(n_Unparsed);
-            k = int.Parse(k_Unparsed);
+            int n = int.Parse(n_Unparsed);
+            int k = int.Parse(k_Unparsed);
+
+            // LOOP Iterate by line for each new binary tree added.
+            {
+                /// Create a new SBT
+                
+                // LOOP Iterate across the line, parsing numbers and adding them to the tree
+                {
+
+                }
+
+                // Iterate through all non-uunique trees, look for a match
+                {
+                    // If this tree matches a non-unique tree, add this tree to the non-unique tree list
+                    //  Then break
+                }
+
+                // Iterate through all unique trees, look for a match
+                {
+                    // If this tree matches a unique tree, add this tree and the unique tree to the non-unique tree list
+                        // Then break
+                }
+            }
+
         }
     }
 }
